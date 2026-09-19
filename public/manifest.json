@@ -1,0 +1,18 @@
+{
+  "short_name": "SulfSense",
+  "name": "SulfSense — AI Passive H₂S Dosimeter",
+  "description": "Wearable Passive Colorimetric H₂S Exposure Dosimeter with AI Quantitative Monitoring Platform",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192 512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#F8FAFC",
+  "theme_color": "#0E224D",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "categories": ["industrial", "safety", "health", "utilities"]
+}

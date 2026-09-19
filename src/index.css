@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy-dark: #091533;
+  --navy-primary: #15336E;
+  --navy-accent: #2A5EB3;
+  --navy-light: #F0F4FA;
+  --bg-main: #F8FAFC;
+  --card-bg: #FFFFFF;
+  --border-color: #E2E8F0;
+}
+
+body {
+  font-family: 'Outfit', 'Inter', sans-serif;
+  background-color: var(--bg-main);
+  color: var(--navy-dark);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* 3D and Glassmorphism Utilities */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.glass-panel-navy {
+  background: rgba(14, 34, 77, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(78, 125, 203, 0.3);
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.card-3d-hover {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+
+.card-3d-hover:hover {
+  transform: translateY(-4px) rotateX(2deg) rotateY(-1deg);
+  box-shadow: 0 16px 32px -8px rgba(9, 21, 51, 0.14);
+}
+
+/* Glow Effects */
+.glow-emerald {
+  box-shadow: 0 0 18px -2px rgba(5, 150, 105, 0.45);
+}
+
+.glow-amber {
+  box-shadow: 0 0 18px -2px rgba(217, 119, 6, 0.45);
+}
+
+.glow-crimson {
+  box-shadow: 0 0 24px -2px rgba(220, 38, 38, 0.65);
+  animation: pulse-danger 1.5s infinite;
+}
+
+@keyframes pulse-danger {
+  0%, 100% {
+    box-shadow: 0 0 20px -2px rgba(220, 38, 38, 0.65);
+  }
+  50% {
+    box-shadow: 0 0 35px 4px rgba(220, 38, 38, 0.85);
+  }
+}
+
+/* Chemical strip reaction gradient simulator */
+.strip-degradation-layer {
+  background: linear-gradient(135deg, rgba(250, 204, 21, 0.4) 0%, rgba(120, 53, 15, 0.7) 60%, rgba(15, 23, 42, 0.95) 100%);
+}
+
+/* Micro animations */
+.animate-fade-in-up {
+  animation: fadeInUp 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
